@@ -6,6 +6,8 @@ A native macOS workspace for local meeting transcripts, decisions and actions. B
 
 **Known native limits (24 Oct 2026):** The custom editions' packaged walkthrough remains pending. A separate same-binary synthetic Replica retake partially passed note edit/save/reopen and manual action creation after an earlier note-detail launch stall; its cause is unconfirmed and the result does not apply to these custom editions. Native microphone/system recording and permission acceptance remain unverified.
 
+[![Verify exported Meetings product](https://github.com/Ghostzy0/pip-meetings/actions/workflows/verify.yml/badge.svg?branch=main)](https://github.com/Ghostzy0/pip-meetings/actions/workflows/verify.yml) · [Verification](PUBLIC-VERIFICATION.md) · [Report an issue](https://github.com/Ghostzy0/pip-meetings/issues/1) · [Neutral Core Replica](https://github.com/Ghostzy0/pip-meetings-replica)
+
 ## What it does
 
 - Explicit native recording and local audio processing through the Meeting Transcriber foundation.

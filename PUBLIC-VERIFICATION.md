@@ -2,9 +2,13 @@
 
 23 October 2026. **Experimental native macOS source.** File-fed local transcription and selected persistence/recovery paths have measured evidence. Native microphone/system recording and complete reference fidelity remain unaccepted.
 
-## Current source and local packages
+## Clean-export build inputs and local package checks
 
-The final local source input SHA256 is `2740b9fbdb1c9e204d437bdd541ea4317facd2610cce4969e20fefccfc09fc91`. All four product configurations passed118 selected Swift tests each, including compatible upstream audio/sidecar/crash recovery and local library/revision/draft/pending-ingestion/timeline tests. Tests used isolated synthetic stores. Four release packages passed source/identity/flag/receipt and strict ad-hoc signature checks. Fourteen Python package-integrity regressions and two pinned-speech-setup regressions passed separately.
+The current clean Custom source build-input manifest is SHA-256 `aae4638139564a77ac26934cd04ee83e38fb53f0d2e848ccd06493fc1b23b1a4`; the shared engine input is `c3c68bb96387f3ea1a2d13aa6b3213360273e0d46a96ccc9523c819dfafe4cfb`. Historical local checks used the preceding Custom input digest `37c860ff4cfa6e393d018ccc91c70328be408d54101e6c66b5081c01777f5807`: the default Pip edition ran `scripts/test-native.sh` with 118 selected tests and 0 failures, and `scripts/build-native.sh` built Pip with source receipt, bundle identity, and strict ad-hoc signature verification passing. The current source includes the same compiler-only transcript-view helper extraction as Replica; this exact source digest has not yet been built locally. The local package is not notarised or included in this repository. The shared release-integrity suite passed 14/14 focused Python tests. These checks do not extend to a local package claim for Neutral Plus or Pip Plus; hosted per-edition results are listed below.
+
+## Hosted clean-export CI
+
+The public workflow uses read-only checkout permissions, macOS 26, selected native regression tests, per-edition packaging, and AudioTap tests. [Initial Custom main run](https://github.com/Ghostzy0/pip-meetings/actions/runs/40120729559) tests the preceding app-input digest `37c860ff4cfa6e393d018ccc91c70328be408d54101e6c66b5081c01777f5807`. At the latest check, `baseline-enhanced` and `pip` completed successfully through speech setup, native regressions, packaging, and AudioTap verification; `pip-enhanced` was still running its native regressions. This is not a completed matrix. The current transcript-view helper extraction has digest `aae4638139564a77ac26934cd04ee83e38fb53f0d2e848ccd06493fc1b23b1a4` and awaits its pull-request CI run.
 
 Verified host: Apple Silicon arm64, macOS27.0.1, Xcode27.1/Swift6.4. Intended source target is macOS14.2+ with Swift tools6.2+. Intel and other hosts remain unverified. Local packages are **ad-hoc signed, not Developer ID signed or notarised**. A local build does not establish native recording acceptance.
 
